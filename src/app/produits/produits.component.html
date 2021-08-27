@@ -1,17 +1,24 @@
 
 <h1>Produits disponibles </h1>
  <table class="w3-table">
-    <tr>
-      <th>Id</th>
-      <th>Nom</th>
-      <th>Prix</th>
-      <th>Date Création</th>
-    </tr>
-    <tr *ngFor="let produit of produits">
+
+        <tr >
+          <th>Id</th>
+          <th>Nom</th>
+          <th>Prix</th>
+          <th>Date Création</th>
+          <th>Action</th>
+        </tr>
+    <tr *ngFor="let produit of produit">
       <td>{{produit.idProduit}}</td>
       <td>{{produit.nomProduit}}</td>
       <td>{{produit.prixProduit}}</td>
       <td>{{produit.dateCreation | date:'dd/MM/yyyy'}}</td>
+      <td>
+        <button (click)="supprimerProduit(produit)">Supprimer</button>
+        <button [routerLink]="['/updateProduit',produit.idProduit]">Modifier</button>
+      </td>
+
     </tr>
 </table>
 
