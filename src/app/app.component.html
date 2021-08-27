@@ -15,21 +15,21 @@
    Links -->
   <ul class="navbar-nav">
 
-      <li><a href="">Home</a></li>
-      <li><a href="produits">Produits</a></li>
+      <li> <a [routerLink]="['']">Home</a></li>
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Produits</a>
         <div class="dropdown-content">
-          <a href="/addproduit">Ajouter</a>
-          <a href="#">Lister</a>
+          <a [routerLink]="['addproduit']">Ajouter</a>
+          <a [routerLink]="['produits']">Base</a>
+          <a [routerLink]="['']">Lister</a>
         </div>
       </li>
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">User</a>
         <div class="dropdown-content">
-          <a href="#">Login</a>
-          <a href="#">Logout</a>
-          <a href="#">Profile</a>
+          <a [routerLink]="['']">Login</a>
+          <a [routerLink]="['']">Logout</a>
+          <a [routerLink]="['']">Profile</a>
         </div>
       </li>
 

@@ -1,1 +1,27 @@
-<p>add-produit works!</p>
+
+<div class="container">
+  <div>
+    <h2>Ajouter un Produit :</h2>
+  </div>
+  <form >
+    <div >
+      <label >ID Produit: </label>
+      <input type="text" [(ngModel)]="newProduit.idProduit"  name="idProduit" >
+    </div>
+    <div  >
+      <label >Nom Produit</label>
+      <input type="text"[(ngModel)]= "newProduit.nomProduit"  name="nomProduit" >
+    </div>
+    <div >
+      <label >Prix Produit</label>
+      <input type="number" [(ngModel)]= "newProduit.prixProduit"  name="prixProduit" >
+    </div>
+    <div >
+      <label >Date création</label>
+      <input type="date" [(ngModel)]= "newProduit.dateCreation"  name="dateCreation" >
+    </div>
+    <div >
+      <button type="submit" (click)="addProduit()" >Ajouter</button>
+    </div>
+  </form>
+</div>

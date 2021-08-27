@@ -1,1 +1,19 @@
-<p>produits works!</p>
+
+<h1>Produits disponibles </h1>
+ <table class="w3-table">
+    <tr>
+      <th>Id</th>
+      <th>Nom</th>
+      <th>Prix</th>
+      <th>Date Création</th>
+    </tr>
+    <tr *ngFor="let produit of produits">
+      <td>{{produit.idProduit}}</td>
+      <td>{{produit.nomProduit}}</td>
+      <td>{{produit.prixProduit}}</td>
+      <td>{{produit.dateCreation | date:'dd/MM/yyyy'}}</td>
+    </tr>
+</table>
+
+
+
